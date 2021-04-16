@@ -35,17 +35,24 @@ class LandingPageView: UIView {
     lazy var gradientLayer: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.frame = AppDelegate.shared.window!.bounds
+//        gradient.colors = [
+//            UIColor(red: 0.85, green: 0.93, blue: 0.57, alpha: 1.00).cgColor,
+//            UIColor(red: 0.71, green: 0.89, blue: 0.55, alpha: 1.00).cgColor,
+//            UIColor(red: 0.60, green: 0.85, blue: 0.55, alpha: 1.00).cgColor,
+//            UIColor(red: 0.46, green: 0.78, blue: 0.58, alpha: 1.00).cgColor,
+//            UIColor(red: 0.32, green: 0.71, blue: 0.60, alpha: 1.00).cgColor,
+//            UIColor(red: 0.20, green: 0.63, blue: 0.64, alpha: 1.00).cgColor,
+//            UIColor(red: 0.09, green: 0.54, blue: 0.68, alpha: 1.00).cgColor,
+//            UIColor(red: 0.10, green: 0.46, blue: 0.62, alpha: 1.00).cgColor,
+//            UIColor(red: 0.12, green: 0.38, blue: 0.57, alpha: 1.00).cgColor,
+//            UIColor(red: 0.09, green: 0.31, blue: 0.47, alpha: 1.00).cgColor
+//        ]
         gradient.colors = [
             UIColor(red: 0.85, green: 0.93, blue: 0.57, alpha: 1.00).cgColor,
-            UIColor(red: 0.71, green: 0.89, blue: 0.55, alpha: 1.00).cgColor,
             UIColor(red: 0.60, green: 0.85, blue: 0.55, alpha: 1.00).cgColor,
-            UIColor(red: 0.46, green: 0.78, blue: 0.58, alpha: 1.00).cgColor,
             UIColor(red: 0.32, green: 0.71, blue: 0.60, alpha: 1.00).cgColor,
-            UIColor(red: 0.20, green: 0.63, blue: 0.64, alpha: 1.00).cgColor,
-            UIColor(red: 0.09, green: 0.54, blue: 0.68, alpha: 1.00).cgColor,
             UIColor(red: 0.10, green: 0.46, blue: 0.62, alpha: 1.00).cgColor,
-            UIColor(red: 0.12, green: 0.38, blue: 0.57, alpha: 1.00).cgColor,
-            UIColor(red: 0.09, green: 0.31, blue: 0.47, alpha: 1.00).cgColor
+            UIColor(red: 0.09, green: 0.11, blue: 0.47, alpha: 1.00).cgColor
         ]
         
         return gradient
@@ -53,17 +60,14 @@ class LandingPageView: UIView {
     
     init() {
         super.init(frame: .zero)
-//        self.backgroundColor = .blue
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
+        self.layer.insertSublayer(gradientLayer, at: 0)
         
         self.addSubview(self.profilePicture)
         self.addSubview(self.collectionView)
         
-        
-        self.layer.insertSublayer(gradientLayer, at: 0)
-        
-        
+        //MARK: - Layout
         self.profilePicture.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.profilePicture.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 90).isActive = true
         self.profilePicture.widthAnchor.constraint(equalToConstant: 120).isActive = true
