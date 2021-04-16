@@ -7,6 +7,7 @@
 
 import UIKit
 import IGListKit
+import SnapKit
 
 class LandingPageVC: UIViewController {
     
@@ -36,10 +37,9 @@ class LandingPageVC: UIViewController {
         self.invalidate()
         
         //MARK: - Layout
-        self.rootView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.rootView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.rootView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        self.rootView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.rootView.snp.remakeConstraints { make in
+            make.edges.equalTo(self.view.snp.edges)
+        }
     }
 
 //MARK: - Invalidation Procedures

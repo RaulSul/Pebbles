@@ -8,6 +8,7 @@ target 'Pebbles' do
   # Pods for Pebbles
 
 	pod 'IGListKit', '~> 4.0'
+  pod 'SnapKit', '~> 5.0.0'
 
   target 'PebblesTests' do
     inherit! :search_paths
