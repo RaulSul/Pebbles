@@ -18,6 +18,9 @@
 		C413C12E262A3BED0045EB64 /* PebblesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C12D262A3BED0045EB64 /* PebblesUITests.swift */; };
 		C413C14D262A3D730045EB64 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C14C262A3D730045EB64 /* LandingPageView.swift */; };
 		C413C155262A3D9E0045EB64 /* LandingPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C154262A3D9E0045EB64 /* LandingPageVM.swift */; };
+		C413C15F262A4BB20045EB64 /* SpacerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C15E262A4BB20045EB64 /* SpacerSectionController.swift */; };
+		C413C169262A4C260045EB64 /* SpacerSectionControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C168262A4C260045EB64 /* SpacerSectionControllerModel.swift */; };
+		C413C171262A4C4B0045EB64 /* SpacerSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C170262A4C4B0045EB64 /* SpacerSectionCell.swift */; };
 		C58A36F2D159561F0FBB4DD4 /* Pods_Pebbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF8AD72A2BFBD41A359C1E /* Pods_Pebbles.framework */; };
 		CA6722791C4D55140E5B2909 /* Pods_Pebbles_PebblesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */; };
 		CD30F963401DEE35F5B9AF1F /* Pods_PebblesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434E2EE3D4E654A014AD689B /* Pods_PebblesTests.framework */; };
@@ -66,6 +69,9 @@
 		C413C12F262A3BED0045EB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C413C14C262A3D730045EB64 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		C413C154262A3D9E0045EB64 /* LandingPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageVM.swift; sourceTree = "<group>"; };
+		C413C15E262A4BB20045EB64 /* SpacerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionController.swift; sourceTree = "<group>"; };
+		C413C168262A4C260045EB64 /* SpacerSectionControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionControllerModel.swift; sourceTree = "<group>"; };
+		C413C170262A4C4B0045EB64 /* SpacerSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionCell.swift; sourceTree = "<group>"; };
 		CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pebbles_PebblesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -189,8 +195,27 @@
 			isa = PBXGroup;
 			children = (
 				C413C159262A3DA50045EB64 /* LandingPage */,
+				C413C167262A4BC50045EB64 /* ReusableComponents */,
 			);
 			path = Usecases;
+			sourceTree = "<group>";
+		};
+		C413C163262A4BB80045EB64 /* SpacerSectionItem */ = {
+			isa = PBXGroup;
+			children = (
+				C413C15E262A4BB20045EB64 /* SpacerSectionController.swift */,
+				C413C168262A4C260045EB64 /* SpacerSectionControllerModel.swift */,
+				C413C170262A4C4B0045EB64 /* SpacerSectionCell.swift */,
+			);
+			path = SpacerSectionItem;
+			sourceTree = "<group>";
+		};
+		C413C167262A4BC50045EB64 /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C413C163262A4BB80045EB64 /* SpacerSectionItem */,
+			);
+			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,11 +457,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C413C10D262A3BEB0045EB64 /* LandingPageVC.swift in Sources */,
+				C413C169262A4C260045EB64 /* SpacerSectionControllerModel.swift in Sources */,
 				C413C113262A3BEB0045EB64 /* Pebbles.xcdatamodeld in Sources */,
 				C413C14D262A3D730045EB64 /* LandingPageView.swift in Sources */,
 				C413C109262A3BEB0045EB64 /* AppDelegate.swift in Sources */,
+				C413C15F262A4BB20045EB64 /* SpacerSectionController.swift in Sources */,
 				C413C10B262A3BEB0045EB64 /* SceneDelegate.swift in Sources */,
 				C413C155262A3D9E0045EB64 /* LandingPageVM.swift in Sources */,
+				C413C171262A4C4B0045EB64 /* SpacerSectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
