@@ -42,7 +42,7 @@ class LandingPageVC: UIViewController {
         self.rootView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
 
-
+//MARK: - Invalidation Procedures
     func invalidate() {
         self.listItems = []
         
@@ -59,8 +59,6 @@ class LandingPageVC: UIViewController {
         }
         
     }
-    
-    
 }
 
 
