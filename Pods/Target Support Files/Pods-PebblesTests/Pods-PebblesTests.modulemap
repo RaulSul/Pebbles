@@ -1,0 +1,6 @@
+framework module Pods_PebblesTests {
+  umbrella header "Pods-PebblesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
