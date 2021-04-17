@@ -47,6 +47,10 @@ class LandingPageVC: UIViewController {
         self.listItems = []
         
         self.listItems.append(
+            ConnectingLineControllerModel(id: "connecting_line")
+        )
+        
+        self.listItems.append(
             SpacerSectionControllerModel(
                 id: "top_spacer",
                 backgroundColor: .cyan
@@ -57,7 +61,6 @@ class LandingPageVC: UIViewController {
             self.adapter?.performUpdates(animated: true, completion: nil)
             print(self.TAG + " >>> Invalidated")
         }
-        
     }
 }
 
@@ -74,20 +77,6 @@ extension LandingPageVC: ListAdapterDataSource {
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }
-    
-    
 }
 
-
-extension UICollectionView {
-    static func sectionControllerForObject(
-        modelObject: Any,
-        workingRangeDelegate: ListWorkingRangeDelegate? = nil
-    ) -> ListSectionController {
-        if modelObject is SpacerSectionControllerModel {
-            return SpacerSectionController()
-        }
-        fatalError("can't find a matching section controller for the provided model")
-    }
-}
 

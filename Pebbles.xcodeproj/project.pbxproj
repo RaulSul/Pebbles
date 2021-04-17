@@ -21,6 +21,10 @@
 		C413C15F262A4BB20045EB64 /* SpacerSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C15E262A4BB20045EB64 /* SpacerSectionController.swift */; };
 		C413C169262A4C260045EB64 /* SpacerSectionControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C168262A4C260045EB64 /* SpacerSectionControllerModel.swift */; };
 		C413C171262A4C4B0045EB64 /* SpacerSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413C170262A4C4B0045EB64 /* SpacerSectionCell.swift */; };
+		C4453356262A5E490089FDFD /* ConnectingLineControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453355262A5E490089FDFD /* ConnectingLineControllerModel.swift */; };
+		C445335F262A5E610089FDFD /* ConnectingLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C445335E262A5E610089FDFD /* ConnectingLineController.swift */; };
+		C4453364262A5E6D0089FDFD /* ConnectingLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453363262A5E6D0089FDFD /* ConnectingLineCell.swift */; };
+		C4453369262A5F2B0089FDFD /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453368262A5F2B0089FDFD /* UICollectionView+Helpers.swift */; };
 		C58A36F2D159561F0FBB4DD4 /* Pods_Pebbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF8AD72A2BFBD41A359C1E /* Pods_Pebbles.framework */; };
 		CA6722791C4D55140E5B2909 /* Pods_Pebbles_PebblesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */; };
 		CD30F963401DEE35F5B9AF1F /* Pods_PebblesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434E2EE3D4E654A014AD689B /* Pods_PebblesTests.framework */; };
@@ -72,6 +76,10 @@
 		C413C15E262A4BB20045EB64 /* SpacerSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionController.swift; sourceTree = "<group>"; };
 		C413C168262A4C260045EB64 /* SpacerSectionControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionControllerModel.swift; sourceTree = "<group>"; };
 		C413C170262A4C4B0045EB64 /* SpacerSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSectionCell.swift; sourceTree = "<group>"; };
+		C4453355262A5E490089FDFD /* ConnectingLineControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingLineControllerModel.swift; sourceTree = "<group>"; };
+		C445335E262A5E610089FDFD /* ConnectingLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingLineController.swift; sourceTree = "<group>"; };
+		C4453363262A5E6D0089FDFD /* ConnectingLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingLineCell.swift; sourceTree = "<group>"; };
+		C4453368262A5F2B0089FDFD /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pebbles_PebblesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +161,7 @@
 			children = (
 				C413C108262A3BEB0045EB64 /* AppDelegate.swift */,
 				C413C10A262A3BEB0045EB64 /* SceneDelegate.swift */,
+				C4453368262A5F2B0089FDFD /* UICollectionView+Helpers.swift */,
 				C413C15A262A3DAF0045EB64 /* Usecases */,
 				C413C10E262A3BEB0045EB64 /* Main.storyboard */,
 				C413C114262A3BED0045EB64 /* Assets.xcassets */,
@@ -214,8 +223,19 @@
 			isa = PBXGroup;
 			children = (
 				C413C163262A4BB80045EB64 /* SpacerSectionItem */,
+				C445335A262A5E530089FDFD /* ConnectingLineItem */,
 			);
 			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		C445335A262A5E530089FDFD /* ConnectingLineItem */ = {
+			isa = PBXGroup;
+			children = (
+				C4453355262A5E490089FDFD /* ConnectingLineControllerModel.swift */,
+				C445335E262A5E610089FDFD /* ConnectingLineController.swift */,
+				C4453363262A5E6D0089FDFD /* ConnectingLineCell.swift */,
+			);
+			path = ConnectingLineItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +478,11 @@
 			files = (
 				C413C10D262A3BEB0045EB64 /* LandingPageVC.swift in Sources */,
 				C413C169262A4C260045EB64 /* SpacerSectionControllerModel.swift in Sources */,
+				C4453369262A5F2B0089FDFD /* UICollectionView+Helpers.swift in Sources */,
 				C413C113262A3BEB0045EB64 /* Pebbles.xcdatamodeld in Sources */,
+				C4453364262A5E6D0089FDFD /* ConnectingLineCell.swift in Sources */,
+				C4453356262A5E490089FDFD /* ConnectingLineControllerModel.swift in Sources */,
+				C445335F262A5E610089FDFD /* ConnectingLineController.swift in Sources */,
 				C413C14D262A3D730045EB64 /* LandingPageView.swift in Sources */,
 				C413C109262A3BEB0045EB64 /* AppDelegate.swift in Sources */,
 				C413C15F262A4BB20045EB64 /* SpacerSectionController.swift in Sources */,
