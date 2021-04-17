@@ -46,7 +46,18 @@ class LandingPageVC: UIViewController {
         self.listItems = []
         
         self.listItems.append(
-            ConnectingLineControllerModel(id: "connecting_line")
+            AddEventControllerModel(
+                id: "add_event_controller",
+                onAddEvent: {
+                    print(self.TAG + " >>> Add Event initiated...")
+                }
+            )
+        )
+        
+        self.listItems.append(
+            ConnectingLineControllerModel(
+                id: "connecting_line_0"
+            )
         )
         
         self.listItems.append(
@@ -58,7 +69,7 @@ class LandingPageVC: UIViewController {
         
         DispatchQueue.main.async {
             self.adapter?.performUpdates(animated: true, completion: nil)
-            print(self.TAG + " >>> Invalidated")
+            print(self.TAG + " >>> Invalidated...")
         }
     }
 }

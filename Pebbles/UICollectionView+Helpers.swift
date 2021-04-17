@@ -18,7 +18,12 @@ extension UICollectionView {
             return SpacerSectionController()
         } else if modelObject is ConnectingLineControllerModel {
             return ConnectingLineController()
+        } else if modelObject is AddEventControllerModel {
+            return AddEventController()
         }
+        
+        
+        
         fatalError("can't find a matching section controller for the provided model")
     }
 }

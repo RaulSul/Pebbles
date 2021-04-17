@@ -12,9 +12,15 @@ import UIKit
 class ConnectingLineCell: UICollectionViewCell {
     var modelObject: ConnectingLineControllerModel?
     
-    lazy var lineView: UIView = {
+    lazy var outerLineView: UIView = {
         let line: UIView = UIView()
         line.backgroundColor = UIColor(red: 0.93, green: 0.78, blue: 0.26, alpha: 1.00)
+        return line
+    }()
+    
+    lazy var innerLineView: UIView = {
+        let line: UIView = UIView()
+        line.backgroundColor = .white
         return line
     }()
 
@@ -22,12 +28,20 @@ class ConnectingLineCell: UICollectionViewCell {
         super.init(frame: frame)
         self.contentView.backgroundColor = .clear
         
-        self.contentView.addSubview(self.lineView)
+        self.contentView.addSubview(self.outerLineView)
+        self.contentView.insertSubview(self.innerLineView, aboveSubview: self.outerLineView)
         
-        self.lineView.snp.remakeConstraints { make in
-            make.center.equalTo(self.contentView.snp.center)
+        self.outerLineView.snp.remakeConstraints { make in
+//            make.center.equalTo(self.contentView.snp.center)
             make.height.equalTo(self.contentView.snp.height)
             make.width.equalTo(20)
+            make.leading.equalTo(self.contentView.snp.leading).offset(80)
+        }
+        
+        self.innerLineView.snp.remakeConstraints { make in
+            make.center.equalTo(self.outerLineView.snp.center)
+            make.height.equalTo(self.outerLineView.snp.height)
+            make.width.equalTo(5)
         }
     }
 
