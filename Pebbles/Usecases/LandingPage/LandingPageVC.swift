@@ -33,7 +33,6 @@ class LandingPageVC: UIViewController {
         adapter.dataSource = self
         self.adapter = adapter
         
-        
         self.invalidate()
         
         //MARK: - Layout

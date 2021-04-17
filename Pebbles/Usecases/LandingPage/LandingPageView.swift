@@ -10,26 +10,16 @@ import SnapKit
 
 class LandingPageView: UIView {
     
-    lazy var profilePicture: UIImageView = {
-        let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = imageView.frame.width / 2
-        
-        if let image: UIImage = UIImage(named: "raul") {
-            imageView.image = image
-        }
-        
-        return imageView
+    lazy var headerView: LPHeaderView = {
+        return LPHeaderView()
     }()
     
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .clear
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.clipsToBounds = true
+        collectionView.alwaysBounceVertical = true
+        
         return collectionView
     }()
     
@@ -49,23 +39,22 @@ class LandingPageView: UIView {
     
     init() {
         super.init(frame: .zero)
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.clipsToBounds = true
         self.layer.insertSublayer(gradientLayer, at: 0)
         
-        self.addSubview(self.profilePicture)
+        self.addSubview(self.headerView)
         self.addSubview(self.collectionView)
         
         //MARK: - Layout
         
-        self.profilePicture.snp.remakeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(60)
+        self.headerView.snp.remakeConstraints { make in
+            make.top.equalTo(self.snp.top)
             make.centerX.equalTo(self.snp.centerX)
-            make.height.width.equalTo(120)
+            make.height.equalTo(200)
+            make.width.equalTo(self.snp.width)
         }
         
         self.collectionView.snp.remakeConstraints { make in
-            make.top.equalTo(self.profilePicture.snp.bottom)
+            make.top.equalTo(self.headerView.snp.bottom)
             make.trailing.equalTo(self.snp.trailing)
             make.leading.equalTo(self.snp.leading)
             make.bottom.equalTo(self.snp.bottom)

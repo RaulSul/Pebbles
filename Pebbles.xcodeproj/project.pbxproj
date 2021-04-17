@@ -25,6 +25,7 @@
 		C445335F262A5E610089FDFD /* ConnectingLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C445335E262A5E610089FDFD /* ConnectingLineController.swift */; };
 		C4453364262A5E6D0089FDFD /* ConnectingLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453363262A5E6D0089FDFD /* ConnectingLineCell.swift */; };
 		C4453369262A5F2B0089FDFD /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453368262A5F2B0089FDFD /* UICollectionView+Helpers.swift */; };
+		C4453371262AE0800089FDFD /* LPHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453370262AE0800089FDFD /* LPHeaderView.swift */; };
 		C58A36F2D159561F0FBB4DD4 /* Pods_Pebbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF8AD72A2BFBD41A359C1E /* Pods_Pebbles.framework */; };
 		CA6722791C4D55140E5B2909 /* Pods_Pebbles_PebblesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */; };
 		CD30F963401DEE35F5B9AF1F /* Pods_PebblesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434E2EE3D4E654A014AD689B /* Pods_PebblesTests.framework */; };
@@ -80,6 +81,7 @@
 		C445335E262A5E610089FDFD /* ConnectingLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingLineController.swift; sourceTree = "<group>"; };
 		C4453363262A5E6D0089FDFD /* ConnectingLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingLineCell.swift; sourceTree = "<group>"; };
 		C4453368262A5F2B0089FDFD /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
+		C4453370262AE0800089FDFD /* LPHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPHeaderView.swift; sourceTree = "<group>"; };
 		CF59A4FC94EA11A2D5E680A7 /* Pods_Pebbles_PebblesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pebbles_PebblesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,6 +198,7 @@
 				C413C10C262A3BEB0045EB64 /* LandingPageVC.swift */,
 				C413C154262A3D9E0045EB64 /* LandingPageVM.swift */,
 				C413C14C262A3D730045EB64 /* LandingPageView.swift */,
+				C4453370262AE0800089FDFD /* LPHeaderView.swift */,
 			);
 			path = LandingPage;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				C413C10D262A3BEB0045EB64 /* LandingPageVC.swift in Sources */,
 				C413C169262A4C260045EB64 /* SpacerSectionControllerModel.swift in Sources */,
 				C4453369262A5F2B0089FDFD /* UICollectionView+Helpers.swift in Sources */,
+				C4453371262AE0800089FDFD /* LPHeaderView.swift in Sources */,
 				C413C113262A3BEB0045EB64 /* Pebbles.xcdatamodeld in Sources */,
 				C4453364262A5E6D0089FDFD /* ConnectingLineCell.swift in Sources */,
 				C4453356262A5E490089FDFD /* ConnectingLineControllerModel.swift in Sources */,
